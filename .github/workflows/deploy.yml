@@ -2,7 +2,7 @@ name: Deploy Flutter Web to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # Thay bằng master nếu dự án của bạn dùng branch master
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4 # Đã cập nhật lên v4 chống báo deprecated
         with:
           distribution: 'zulu'
           java-version: '17'
@@ -32,7 +32,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: 'stable' # Hoặc beta, master tùy bạn muốn
+          channel: 'stable'
 
       - name: Install dependencies
         run: flutter pub get
@@ -41,12 +41,12 @@ jobs:
         run: flutter build web --release --base-href "/${{ github.event.repository.name }}/"
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5 # Đã cập nhật lên v5
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build/web' # Đường dẫn trỏ thẳng vào thư mục build web của Flutter
+          path: './build/web'
 
       - name: Deploy to GitHub Pages
         id: deployment
