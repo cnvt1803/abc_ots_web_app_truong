@@ -20,7 +20,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion =  null;
+    const serviceWorkerVersion = "3605300254";
   </script>
   <script src="flutter.js" defer=""></script>
 
@@ -31,7 +31,7 @@
 
   <style id="splash-screen-style">
     html {
-      height: 100%
+      height: 100%;
     }
 
     body {
@@ -41,7 +41,6 @@
       background-size: 100% 100%;
     }
 
-    /* Đã sửa: Đảm bảo màn hình nền tối hẳn khi bật Dark Mode */
     @media (prefers-color-scheme: dark) {
       body {
         background-color: #111827;
@@ -55,17 +54,12 @@
       left: 50%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
-
-      /* Cấu hình chiều rộng gốc cho logo */
       width: 280px;
       height: auto;
       object-fit: contain;
-
-      /* THÊM HIỆU ỨNG CO GIÃN (PULSE) CHO LOGO */
       animation: pulse-logo 2.5s ease-in-out infinite;
     }
 
-    /* Định nghĩa hiệu ứng phóng to / thu nhỏ mượt mà bằng CSS Keyframes */
     @keyframes pulse-logo {
       0% {
         transform: translate(-50%, -50%) scale(1);
@@ -74,7 +68,6 @@
 
       50% {
         transform: translate(-50%, -50%) scale(1.08);
-        /* Phóng to lên 8% tại đỉnh chu kỳ */
         opacity: 1;
       }
 
@@ -124,10 +117,17 @@
       right: 0;
     }
   </style>
+
   <script id="splash-screen-script">
     function removeSplashFromWeb() {
-      document.getElementById("splash")?.remove();
-      document.getElementById("splash-branding")?.remove();
+      var splash = document.getElementById("splash");
+      if (splash) {
+        splash.remove();
+      }
+      var branding = document.getElementById("splash-branding");
+      if (branding) {
+        branding.remove();
+      }
       document.body.style.background = "transparent";
     }
   </script>
@@ -140,7 +140,11 @@
 
   <script>
     window.addEventListener('load', function (ev) {
-      // Download main.dart.js
+      // Cơ chế bảo vệ: Tự động xóa splash sau 4 giây phòng trường hợp script bị trễ
+      var timeoutFallback = setTimeout(function () {
+        removeSplashFromWeb();
+      }, 4000);
+
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           serviceWorkerVersion: serviceWorkerVersion,
@@ -148,7 +152,8 @@
         onEntrypointLoaded: function (engineInitializer) {
           engineInitializer.initializeEngine().then(function (appRunner) {
             appRunner.runApp().then(function () {
-              removeSplashFromWeb();
+              clearTimeout(timeoutFallback);
+              setTimeout(removeSplashFromWeb, 100);
             });
           });
         }
