@@ -20,7 +20,7 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "2646816856";
+    const serviceWorkerVersion = "136018461";
   </script>
   <script src="flutter.js" defer=""></script>
 
@@ -41,6 +41,7 @@
       background-size: 100% 100%;
     }
 
+    /* Đã sửa: Đảm bảo màn hình nền tối hẳn khi bật Dark Mode */
     @media (prefers-color-scheme: dark) {
       body {
         background-color: #111827;
@@ -146,7 +147,9 @@
         },
         onEntrypointLoaded: function (engineInitializer) {
           engineInitializer.initializeEngine().then(function (appRunner) {
-            appRunner.runApp();
+            appRunner.runApp().then(function () {
+              removeSplashFromWeb();
+            });
           });
         }
       });
