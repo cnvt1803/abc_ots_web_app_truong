@@ -1,45 +1,38 @@
-<!DOCTYPE html><html>
-<head>
-  <base href="/">
-  <!-- <base href="https://ngddat2706.github.io/tsg_abc_web_demo/"> -->
+<!DOCTYPE html>
+<html>
 
+<head>
+  <!-- <base href="/"> -->
+  <base href="https://cnvt1803.github.io/abc_ots_web_app_truong/">
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Ứng dụng quản lý nhân sự, tiền lương và kế hoạch vật tư TSG">
+  <meta name="description" content="ABC">
 
-  <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="HRMS TSG">
-  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-title" content="ABC OTS">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="icons/192.png">
+  <link class="icon" type="image/x-icon" href="favicon.ico">
 
-  <title>HRMS TSG</title>
+  <title>ABC OTS</title>
   <link rel="manifest" href="manifest.json">
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    const serviceWorkerVersion = "2351446244";
+    const serviceWorkerVersion = "292428435";
   </script>
-  <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer=""></script>
 
-  <!-- PDF.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
   <script type="text/javascript">
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.worker.min.js";
+    pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.worker.min.js";
   </script>
-
-  <!-- Flutter -->
-  <!-- <script defer="" src="main.dart.js" type="application/javascript"></script> -->
-  
 
   <style id="splash-screen-style">
     html {
-      height: 100%
+      height: 100%;
     }
 
     body {
@@ -49,6 +42,12 @@
       background-size: 100% 100%;
     }
 
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #111827;
+      }
+    }
+
     .center {
       margin: 0;
       position: absolute;
@@ -56,22 +55,46 @@
       left: 50%;
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+      width: 280px;
+      height: auto;
+      object-fit: contain;
+      animation: pulse-logo 2.5s ease-in-out infinite;
+    }
+
+    @keyframes pulse-logo {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.9;
+      }
+
+      50% {
+        transform: translate(-50%, -50%) scale(1.08);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.9;
+      }
     }
 
     .contain {
-      display:block;
-      width:100%; height:100%;
+      display: block;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
     }
 
     .stretch {
-      display:block;
-      width:100%; height:100%;
+      display: block;
+      width: 100%;
+      height: 100%;
     }
 
     .cover {
-      display:block;
-      width:100%; height:100%;
+      display: block;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
 
@@ -95,35 +118,49 @@
       right: 0;
     }
   </style>
+
   <script id="splash-screen-script">
     function removeSplashFromWeb() {
-      document.getElementById("splash")?.remove();
-      document.getElementById("splash-branding")?.remove();
+      var splash = document.getElementById("splash");
+      if (splash) {
+        splash.remove();
+      }
+      var branding = document.getElementById("splash-branding");
+      if (branding) {
+        branding.remove();
+      }
       document.body.style.background = "transparent";
     }
   </script>
 </head>
-  <body>
-    <picture id="splash">
-        <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
-        <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
-        <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
-    </picture>
-    
-    <script>
-      window.addEventListener('load', function(ev) {
-        // Download main.dart.js
-        _flutter.loader.loadEntrypoint({
-          serviceWorker: {
-            serviceWorkerVersion: serviceWorkerVersion,
-          },
-          onEntrypointLoaded: function(engineInitializer) {
-            engineInitializer.initializeEngine().then(function(appRunner) {
-              appRunner.runApp();
+
+<body>
+  <picture id="splash">
+    <img class="center" src="icons/logo.svg" alt="Loading...">
+  </picture>
+
+  <script>
+    window.addEventListener('load', function (ev) {
+      // Cơ chế bảo vệ: Tự động xóa splash sau 4 giây phòng trường hợp script bị trễ
+      var timeoutFallback = setTimeout(function () {
+        removeSplashFromWeb();
+      }, 4000);
+
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
+            appRunner.runApp().then(function () {
+              clearTimeout(timeoutFallback);
+              setTimeout(removeSplashFromWeb, 100);
             });
-          }
-        });
+          });
+        }
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>

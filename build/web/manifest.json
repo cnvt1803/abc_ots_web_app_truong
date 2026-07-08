@@ -1,11 +1,11 @@
 {
-    "name": "TSG HRM Web App",
-    "short_name": "TSG HRM",
+    "name": "ABC OTS",
+    "short_name": "ABC OTS",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "Ứng dụng quản lý nhân sự, tiền lương và kế hoạch vật tư TSG",
+    "description": "Ứng dụng quản lý thiết bị và OTA",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
