@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Job 1: Chuẩn bị file và đóng gói artifact
+  # Job 1: Build & chuẩn bị artifact
   build:
     runs-on: ubuntu-latest
     steps:
@@ -23,8 +23,6 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
-        with:
-          enable_jekyll: false
 
       - name: Create .nojekyll file
         run: touch ./web/.nojekyll
@@ -34,9 +32,9 @@ jobs:
         with:
           path: './web'
 
-  # Job 2: Đẩy artifact lên GitHub Pages
+  # Job 2: Deploy lên GitHub Pages
   deploy:
-    needs: build # Bắt buộc chờ job build xong mới chạy
+    needs: build
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
