@@ -14,10 +14,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # Job 1: Chuẩn bị file và đóng gói artifact
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -26,13 +24,24 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
-          enable_jekyll: false 
+          enable_jekyll: false
+
+      - name: Create .nojekyll file
+        run: touch ./web/.nojekyll
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.' 
+          path: './web'
 
+  # Job 2: Đẩy artifact lên GitHub Pages
+  deploy:
+    needs: build # Bắt buộc chờ job build xong mới chạy
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
