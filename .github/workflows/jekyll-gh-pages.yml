@@ -28,6 +28,9 @@ jobs:
         with:
           enable_jekyll: false
 
+      - name: Disable Jekyll (Create .nojekyll)
+        run: touch .nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
