@@ -26,15 +26,12 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
-          enable_jekyll: false
-
-      - name: Disable Jekyll (Create .nojekyll)
-        run: touch .nojekyll
+          enable_jekyll: false # Ép buộc tắt Jekyll để tránh lỗi hiển thị nhầm file splash
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: './' 
 
       - name: Deploy to GitHub Pages
         id: deployment
