@@ -75875,7 +75875,7 @@ s=A.M(new A.U(s,new A.b3q(this),r),r.h("ai.E"))
 this.k4=s},
 giU(a){return this.k4},
 q3(a){var s=A.H(this.id),r=a.a,q=A.W(r).h("U<1,d>")
-r=A.M(new A.U(r,new A.b3s(this,t.Mz.a(r[0].b),s.ax.b,s),q),q.h("ai.E"))
+r=A.M(new A.U(r,new A.b3s(this,t.Mz.a(B.b.gaB(r).b),s.ax.b,s),q),q.h("ai.E"))
 return new A.nf(null,r)}}
 A.b3r.prototype={
 $1(a){return this.aso(a)},
@@ -75891,11 +75891,11 @@ case 1:return A.v(q,r)}})
 return A.w($async$$1,r)},
 $S:243}
 A.b3q.prototype={
-$1(a){var s,r,q,p,o,n,m=this.a.k3.j(0,a.a)
-if(m==null)m=A.b([],t.ZE)
-s=J.b0(m)
-r=s.gq(m)
-s=s.h0(m,new A.b3o(),t.N).w3(0,new A.b3p())
+$1(a){var s,r,q,p,o,n=this.a.k3.j(0,a.a)
+if(n==null)n=A.b([],t.ZE)
+s=J.b0(n)
+r=s.gq(n)
+s=s.h0(n,new A.b3o(),t.N).w3(0,new A.b3p())
 s=A.fy(s,s.$ti.h("o.E"))
 q=A.M(s,A.k(s).c)
 if(!A.bE1(a.a))p="Kh\xf4ng c\xf3 quy\u1ec1n xem"
@@ -75903,9 +75903,8 @@ else{s=q.length
 if(s>1)p="Nhi\u1ec1u phi\xean b\u1ea3n Firmware"
 else p=s===1?B.b.ga2(q):"---"}s=a.f
 o=s!=null?B.c.df(B.e.k(A.dh(s)),2,"0")+"/"+B.c.df(B.e.k(A.c1(s)),2,"0")+"/"+A.bY(s)+" "+B.c.df(B.e.k(A.hR(s)),2,"0")+":"+B.c.df(B.e.k(A.wI(s)),2,"0"):"---"
-s=t.eF
-n=t.MK
-return new A.cD(A.b([new A.c0("T\xean D\u1ef1 \xc1n",a,s),new A.c0("M\xe3 d\u1ef1 \xe1n",a.c,n),new A.c0("S\u1ed1 thi\u1ebft b\u1ecb",r,t.Mm),new A.c0("Firmware Version",p,n),new A.c0("Ng\xe0y t\u1ea1o",o,n),new A.c0("Thao t\xe1c",a,s)],t.PS))},
+s=t.MK
+return new A.cD(A.b([new A.c0("T\xean D\u1ef1 \xc1n",a.b,s),new A.c0("M\xe3 d\u1ef1 \xe1n",a.c,s),new A.c0("S\u1ed1 thi\u1ebft b\u1ecb",r,t.Mm),new A.c0("Firmware Version",p,s),new A.c0("Ng\xe0y t\u1ea1o",o,s),new A.c0("Thao t\xe1c",a,t.eF)],t.PS))},
 $S:247}
 A.b3o.prototype={
 $1(a){return B.c.ag(a.r)},
@@ -76265,7 +76264,7 @@ m=A.Z("MAC: "+a3+" | FW: "+m,1,B.x,e,e,A.Q(e,e,k,e,e,e,e,e,e,e,e,a6?9:11,e,e,e,e
 a=a.aJ6(d.z)
 a=A.Z("Ng\xe0y g\xe1n: "+a,1,B.x,e,e,A.Q(e,e,k,e,e,e,e,e,e,e,e,a6?9:11,e,e,e,e,e,!0,e,e,e,e,e,e,e,e),e,e,e)
 j=d.y
-i=j?"Tr\u1ea1ng th\xe1i: \u0110ang ho\u1ea1t \u0111\u1ed9ng":"Tr\u1ea1ng th\xe1i: \u0110\xe3 d\u1eebng ho\u1ea1t \u0111\u1ed9ng"
+i=j?"Tr\u1ea1ng th\xe1i: \u0110ang ho\u1ea1t \u0111\u1ed9ng trong d\u1ef1 \xe1n":"Tr\u1ea1ng th\xe1i: \u0110\xe3 d\u1eebng ho\u1ea1t \u0111\u1ed9ng trong d\u1ef1 \xe1n"
 h=a6?8.5:10.5
 g=t.p
 h=A.bE(A.aF(A.b([n,l,B.it,m,B.OX,a,B.OX,A.Z(i,1,B.x,e,e,A.Q(e,e,j?B.vp:k.a8(0.7),e,e,e,e,e,e,e,e,h,B.eu,e,e,e,e,!0,e,e,e,e,e,e,e,e),e,e,e)],g),B.w,B.i,B.I,0),1)
