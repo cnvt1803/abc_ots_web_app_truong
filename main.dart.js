@@ -73413,7 +73413,7 @@ p=q.d
 r=r.h6(0,p==null?q.geV():p)
 q=this.b
 p=A.mg(q)
-q=A.ay(q,B.A,t.l).w.a.a<=700?B.bZ:B.c_
+q=A.ay(q,B.A,t.l).w.a.a<=500?B.bZ:B.c_
 return A.i_(m,new A.aj(o,r.b-130,A.l2(A.lT(!1,!0,!0,q,A.a([A.c5(!1,!0,"T\xe0i Kho\u1ea3n Web",o,0/0,!0,0/0),A.c5(!1,!0,"B\u1ea3n Quy\u1ec1n",o,200,!0,0/0),A.c5(!1,!0,"Ng\xe0y C\xe0i \u0110\u1eb7t",o,200,!0,0/0),A.c5(!1,!1,"C\u1ea3nh B\xe1o",o,200,!0,0/0),A.c5(!1,!1,"Thao t\xe1c",o,250,!0,80)],t.ps),n.p1,0,u._,B.bp,0/0,!1,n.k4,B.aT,o,o,50,B.aO,!1,!1,!1,s,o,B.iL),p),o),B.ao)},
 $S:46}
 A.La.prototype={
@@ -75894,7 +75894,7 @@ q=this.b
 p=A.mg(q)
 o=A.iL(q)
 o.toString
-q=A.ay(q,B.A,t.l).w.a.a<=700?B.bZ:B.c_
+q=A.ay(q,B.A,t.l).w.a.a<=500?B.bZ:B.c_
 return A.i_(m,new A.aj(n,r.b-130,A.l2(A.lT(!0,!0,!0,q,A.a([A.OI(!0,!0,"T\xe0i kho\u1ea3n",A.ao(n,n,B.k,n,n,n,n,n,n,n,n,n,n,n),0/0,B.hv,!1,0/0),A.c5(!1,!0,"D\u1ef1 \xe1n",n,0/0,!0,0/0),A.c5(!1,!0,"Xem",n,100,!0,0/0),A.c5(!1,!0,"OTA",n,100,!0,0/0),A.c5(!1,!0,"S\u1eeda",n,100,!0,0/0),A.c5(!1,!1,"Thao t\xe1c",n,250,!0,80)],t.ps),n,0,"{Key}",B.bp,60,!1,n,B.aT,n,n,55,B.aO,!1,!1,!1,s,o,B.bA),p),n),B.ao)},
 $S:46}
 A.aiU.prototype={
