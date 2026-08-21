@@ -76552,24 +76552,21 @@ case 2:p=d
 if(p!=null)q.Z(new A.b5Y(b,p))
 return A.n(null,r)}})
 return A.o($async$JF,r)},
-L(a){var s,r,q,p,o,n,m,l,k,j=this,i=null,h=A.I(a),g=t.l,f=A.aG(a,B.B,g).w.a.a<=500,e=A.aG(a,i,g).w
-g=f?0.85:0.8
-s=h.ax.k3
-r=j.f
-r===$&&A.b()
-q=A.ct(A.dv(a,!0,j.x,new A.b61(j),"Nh\u1eadp t\xean t\xe0i kho\u1ea3n...",1,!1,i,!1,r),a,!0,"T\xe0i Kho\u1ea3n Web",!0,1/0)
-r=j.r
-r===$&&A.b()
-p=A.ct(A.dv(a,!0,j.y,new A.b62(j),"Paid / Trial...",1,!1,i,!1,r),a,!0,"Lo\u1ea1i B\u1ea3n Quy\u1ec1n",!1,1/0)
-r=j.w
-r===$&&A.b()
-o=A.ct(A.dv(a,!1,j.z,new A.b63(),"YYYY-MM-DD",1,!1,new A.b64(j,a),!1,r),a,!0,"Ng\xe0y C\xe0i \u0110\u1eb7t",!1,1/0)
-n=A.Do(j.at,"K\xedch ho\u1ea1t c\u1ea3nh b\xe1o l\u1ed7i h\u1ec7 th\u1ed1ng",A.ad(i,i,s,i,i,i,i,i,i,i,i,13.5,i,i,B.A,i,i,!0,i,i,i,i,i,i,i,i),j.as)
-r=f?12:8
-m=A.aj(16)
-l=f?16:8
-k=t.p
-return A.hr(i,h.at,A.av(i,A.aM(A.a([A.al(A.a([A.ar(new A.aC(B.aD,A.Z("TH\xcaM T\xc0I KHO\u1ea2N WEB M\u1edaI",1,B.x,i,i,A.ad(i,i,s,i,i,i,i,i,i,i,i,f?18:20,i,i,B.N,i,i,!0,i,i,i,i,i,i,i,i),i,i,i),i),1),A.dE(i,i,i,B.bZ,i,i,new A.b65(),i,i,i,i)],k),B.k,B.aa,B.j,0),B.t,A.ar(A.h7(0.3,A.ez(A.aM(A.a([q,B.t,p,B.t,o,B.t,n],k),B.I,B.h,B.j,0),i,B.E,i,B.ba,B.a1,i,i,B.O),a),1),B.t,new A.aC(B.aD,new A.bw(new A.b66(j),i),i)],k),B.az,B.h,B.Q,0),B.l,i,new A.af(0,520,0,e.a.b*g),i,i,i,i,i,new A.a6(l,l,l,l),i,i,i),i,i,new A.a6(r,24,r,24),B.bt,i,new A.bj(m,B.p),i)},
+L(a){var s,r,q,p,o,n,m,l=this,k=null,j=A.I(a),i=A.aG(a,B.B,t.l).w.a.a<=500,h=j.ax.k3,g=l.f
+g===$&&A.b()
+s=A.ct(A.dv(a,!0,l.x,new A.b61(l),"Nh\u1eadp t\xean t\xe0i kho\u1ea3n...",1,!1,k,!1,g),a,!0,"T\xe0i Kho\u1ea3n Web",!0,1/0)
+g=l.r
+g===$&&A.b()
+r=A.ct(A.dv(a,!0,l.y,new A.b62(l),"Paid / Trial...",1,!1,k,!1,g),a,!0,"Lo\u1ea1i B\u1ea3n Quy\u1ec1n",!1,1/0)
+g=l.w
+g===$&&A.b()
+q=A.ct(A.dv(a,!1,l.z,new A.b63(),"YYYY-MM-DD",1,!1,new A.b64(l,a),!1,g),a,!0,"Ng\xe0y C\xe0i \u0110\u1eb7t",!1,1/0)
+p=A.Do(l.at,"K\xedch ho\u1ea1t c\u1ea3nh b\xe1o l\u1ed7i h\u1ec7 th\u1ed1ng",A.ad(k,k,h,k,k,k,k,k,k,k,k,13.5,k,k,B.A,k,k,!0,k,k,k,k,k,k,k,k),l.as)
+g=i?12:8
+o=A.aj(16)
+n=i?16:8
+m=t.p
+return A.hr(k,j.at,A.av(k,A.aM(A.a([A.al(A.a([A.ar(new A.aC(B.aD,A.Z("TH\xcaM T\xc0I KHO\u1ea2N WEB M\u1edaI",1,B.x,k,k,A.ad(k,k,h,k,k,k,k,k,k,k,k,i?18:20,k,k,B.N,k,k,!0,k,k,k,k,k,k,k,k),k,k,k),k),1),A.dE(k,k,k,B.bZ,k,k,new A.b65(),k,k,k,k)],m),B.k,B.aa,B.j,0),B.t,A.ar(A.h7(0.3,A.ez(A.aM(A.a([s,B.t,r,B.t,q,B.t,p],m),B.I,B.h,B.j,0),k,B.E,k,B.ba,B.a1,k,k,B.O),a),1),B.t,new A.aC(B.aD,new A.bw(new A.b66(l),k),k)],m),B.az,B.h,B.Q,0),B.l,k,new A.af(0,520,0,500),k,k,k,k,k,new A.a6(n,n,n,n),k,k,k),k,k,new A.a6(g,24,g,24),B.bt,k,new A.bj(o,B.p),k)},
 JG(){var s=0,r=A.p(t.H),q=1,p=[],o=[],n=this,m,l,k,j,i,h,g,f
 var $async$JG=A.l(function(a,b){if(a===1){p.push(b)
 s=q}while(true)switch(s){case 0:f=n.x
@@ -76715,25 +76712,22 @@ case 2:p=d
 if(p!=null)q.Z(new A.bn1(b,p))
 return A.n(null,r)}})
 return A.o($async$La,r)},
-L(a){var s,r,q,p,o,n,m,l,k,j,i=this,h=null,g=A.I(a),f=t.l,e=A.aG(a,B.B,f).w.a.a<=500,d=A.aG(a,h,f).w
-f=e?0.85:0.8
-s=g.ax.k3
-r=i.e
-r===$&&A.b()
-q=A.ct(A.dv(a,!0,i.w,new A.bn5(i),"Nh\u1eadp t\xean t\xe0i kho\u1ea3n...",1,!1,h,!1,r),a,!0,"T\xe0i Kho\u1ea3n Web",!0,1/0)
-r=i.f
-r===$&&A.b()
-p=A.ct(A.dv(a,!0,i.x,new A.bn6(i),"Paid / Trial...",1,!1,h,!1,r),a,!0,"Lo\u1ea1i B\u1ea3n Quy\u1ec1n",!1,1/0)
-r=i.r
-r===$&&A.b()
-o=A.ct(A.dv(a,!1,i.y,new A.bn7(),"YYYY-MM-DD",1,!1,new A.bn8(i,a),!1,r),a,!0,"Ng\xe0y C\xe0i \u0110\u1eb7t",!1,1/0)
-n=A.Do(i.as,"K\xedch ho\u1ea1t c\u1ea3nh b\xe1o l\u1ed7i h\u1ec7 th\u1ed1ng",A.ad(h,h,s,h,h,h,h,h,h,h,h,13.5,h,h,B.A,h,h,!0,h,h,h,h,h,h,h,h),i.Q)
-r=e?12:8
-m=A.aj(16)
-l=e?16:8
-k=i.a.c
-j=t.p
-return A.hr(h,g.at,A.av(h,A.aM(A.a([A.al(A.a([A.ar(new A.aC(B.aD,A.Z("C\u1eacP NH\u1eacT: "+k.d.toUpperCase(),1,B.x,h,h,A.ad(h,h,s,h,h,h,h,h,h,h,h,e?18:20,h,h,B.N,h,h,!0,h,h,h,h,h,h,h,h),h,h,h),h),1),A.dE(h,h,h,B.bZ,h,h,new A.bn9(),h,h,h,h)],j),B.k,B.aa,B.j,0),B.t,A.ar(A.h7(0.3,A.ez(A.aM(A.a([q,B.t,p,B.t,o,B.t,n],j),B.I,B.h,B.j,0),h,B.E,h,B.ba,B.a1,h,h,B.O),a),1),B.t,new A.aC(B.aD,new A.bw(new A.bna(i),h),h)],j),B.az,B.h,B.Q,0),B.l,h,new A.af(0,520,0,d.a.b*f),h,h,h,h,h,new A.a6(l,l,l,l),h,h,h),h,h,new A.a6(r,24,r,24),B.bt,h,new A.bj(m,B.p),h)},
+L(a){var s,r,q,p,o,n,m,l,k=this,j=null,i=A.I(a),h=A.aG(a,B.B,t.l).w.a.a<=500,g=i.ax.k3,f=k.e
+f===$&&A.b()
+s=A.ct(A.dv(a,!0,k.w,new A.bn5(k),"Nh\u1eadp t\xean t\xe0i kho\u1ea3n...",1,!1,j,!1,f),a,!0,"T\xe0i Kho\u1ea3n Web",!0,1/0)
+f=k.f
+f===$&&A.b()
+r=A.ct(A.dv(a,!0,k.x,new A.bn6(k),"Paid / Trial...",1,!1,j,!1,f),a,!0,"Lo\u1ea1i B\u1ea3n Quy\u1ec1n",!1,1/0)
+f=k.r
+f===$&&A.b()
+q=A.ct(A.dv(a,!1,k.y,new A.bn7(),"YYYY-MM-DD",1,!1,new A.bn8(k,a),!1,f),a,!0,"Ng\xe0y C\xe0i \u0110\u1eb7t",!1,1/0)
+p=A.Do(k.as,"K\xedch ho\u1ea1t c\u1ea3nh b\xe1o l\u1ed7i h\u1ec7 th\u1ed1ng",A.ad(j,j,g,j,j,j,j,j,j,j,j,13.5,j,j,B.A,j,j,!0,j,j,j,j,j,j,j,j),k.Q)
+f=h?12:8
+o=A.aj(16)
+n=h?16:8
+m=k.a.c
+l=t.p
+return A.hr(j,i.at,A.av(j,A.aM(A.a([A.al(A.a([A.ar(new A.aC(B.aD,A.Z("C\u1eacP NH\u1eacT: "+m.d.toUpperCase(),1,B.x,j,j,A.ad(j,j,g,j,j,j,j,j,j,j,j,h?18:20,j,j,B.N,j,j,!0,j,j,j,j,j,j,j,j),j,j,j),j),1),A.dE(j,j,j,B.bZ,j,j,new A.bn9(),j,j,j,j)],l),B.k,B.aa,B.j,0),B.t,A.ar(A.h7(0.3,A.ez(A.aM(A.a([s,B.t,r,B.t,q,B.t,p],l),B.I,B.h,B.j,0),j,B.E,j,B.ba,B.a1,j,j,B.O),a),1),B.t,new A.aC(B.aD,new A.bw(new A.bna(k),j),j)],l),B.az,B.h,B.Q,0),B.l,j,new A.af(0,520,0,500),j,j,j,j,j,new A.a6(n,n,n,n),j,j,j),j,j,new A.a6(f,24,f,24),B.bt,j,new A.bj(o,B.p),j)},
 LI(){var s=0,r=A.p(t.H),q=1,p=[],o=[],n=this,m,l,k,j,i,h,g,f,e
 var $async$LI=A.l(function(a,b){if(a===1){p.push(b)
 s=q}while(true)switch(s){case 0:e=n.w
